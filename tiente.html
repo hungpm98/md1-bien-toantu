@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>chuyen doi tien te</title>
+</head>
+<body>
+<input type="text" id="dauvao">
+<select id="1">
+  <option value="vnd">VND</option>
+  <option value="usd">USD</option>
+</select>
+<select id="2">
+  <option value="vnd">VND</option>
+  <option value="usd">USD</option>
+</select>
+<button onclick="chuyendoi()">Convert</button>
+<script>
+  function chuyendoi() {
+    let dauvao = document.getElementById('dauvao').value;
+    let tienviet = document.getElementById('1').value;
+    let dola = document.getElementById('2').value;
+    if (tienviet == dola){
+      alert(dauvao);
+    };
+      if (tienviet == 'vnd' && dola == 'usd'){
+        alert(dauvao/24000);
+      };
+      if ( tienviet == 'usd' && dola == 'vnd'){
+        alert(dauvao*24000);
+      }
+
+
+  }
+</script>
+
+</body>
+</html>
